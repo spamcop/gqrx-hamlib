@@ -1,8 +1,8 @@
-# gqrx2rig - modification for one way control (gqrx->rig), it changes frequency + mode
+# gqrx2rig - modification by spamcop for one way control (gqrx->rig), it changes frequency + mode
 #
 # for example for yaesu ft817 run rigctld as
 # rigctld -m 120 -r /dev/ttyRADIO1 -P RTS -p /dev/ttyRADIO1 -t 4532 --set-conf=serial_handshake=None,dtr_state=Unset,rts_state=Unset,stop_bits=2,serial_speed=9600 -vvv
-# then run gqrx and eanble remote control
+# then run gqrx and enable remote control
 # then run python ./gqrx2rig.py
 #
 ##################################
