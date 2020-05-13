@@ -158,14 +158,14 @@ old_gqrx_freq = getfreq(GQRX_PORT)
 old_gqrx_mode = getmode(GQRX_PORT)
 
 while forever:
-    time.sleep(3)
+    time.sleep(1)
     
     gqrx_freq = getfreq(GQRX_PORT)
     gqrx_mode = getmode(GQRX_PORT)
 
     # change rig frequency only if gqrx frequency changed more than delta (200Hz for example)
 
-    if abs(int(gqrx_freq) - int(old_gqrx_freq)) >= 200:
+    if abs(int(gqrx_freq) - int(old_gqrx_freq)) > 100:
 
         rc = setfreq(RIG_PORT, gqrx_freq)
         print >>sys.stderr, 'Return Code from Hamlib: "%s"' % rc.rstrip()
